@@ -1,0 +1,67 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="WikiRun:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/WikiRun_jar</output-path>
+    <root id="archive" name="WikiRun.jar">
+      <element id="module-output" name="WikiRun.main" />
+      <element id="module-test-output" name="WikiRun.test" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.swinglabs/swingx/1.6.1/a4abf05f5f1d3b020ec4099495dcd1452b615e26/swingx-1.6.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apiguardian/apiguardian-api/1.1.2/a231e0d844d2721b0fa1b238006d15c6ded6842a/apiguardian-api-1.1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-swing/20/b2d72191389056448fc0ed5bb64e005ebcba0321/javafx-swing-20-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-imaging/1.0-alpha3/6c753938422d5810ab815a24337d062bf4e22614/commons-imaging-1.0-alpha3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.gluonhq.attach/storage/4.0.13/c16d015d2cd2f7582fb37aebb0ad21a742f22ff3/storage-4.0.13.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.almasb/fxgl/17.1/2a9509aedf54954c9b13849c18c6f495a81c542d/fxgl-17.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jhlabs/filters/2.0.235/af6a2dfefef70f1ab2d7a8d1f8173f67e276b3f4/filters-2.0.235.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.synedra/validatorfx/0.3.1/cb7cf720db10335be7cc211b22cd4fb902c9bb18/validatorfx-0.3.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-media/20/1592985d84594091ba65b3beac3f4630c5def89e/javafx-media-20.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.friwi/jcefmaven/110.0.25/591e5de39e070c9853573e78e5a75c982b1652e/jcefmaven-110.0.25.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.5.32/c8a5974a9f1b6cb2fa42b4fd2a15923fb3931c3f/kotlin-stdlib-1.5.32-modular.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.21/4ec95b60d4e86b5c95a0e919cb172a0af98011ef/commons-compress-1.21.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.gluonhq.attach/audio/4.0.13/5f799f84ebfa1749e9a0d5d1c98258a6fa6d8252/audio-4.0.13.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.12.1/7c5493930e439be6fcec80a9afd6516b8e5e8760/jackson-core-2.12.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/20/82863562a321abc761f301477ef90ba6c20f022a/javafx-base-20.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.almasb/fxgl-core/17.1/fbbf73cf603688cd65b51b85f31f5da0ae5e6ed4/fxgl-core-17.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.2.0/28c11eb91f9b6d8e200631d46e20a7f407f2a046/opentest4j-1.2.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/20/f9a84d43adab2745f4999e7ff9a64f12dd563f1f/javafx-controls-20-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.almasb/fxgl-scene/17.1/29e5dbde83903e61dd580ee133fafc4c9883271b/fxgl-scene-17.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.9.1/83591e5089d6cea5f324aa3ecca9b19d5a275803/junit-platform-engine-1.9.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.kordamp.ikonli/ikonli-javafx/12.3.1/6df78c8f23f4509f88b8e05c32da64b7dc494356/ikonli-javafx-12.3.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.friwi/gluegen-rt/v2.4.0-rc-20210111/c37a51c8741afce3b75efda7e325f84f8f221c1/gluegen-rt-v2.4.0-rc-20210111.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-web/20/bc53a5a80c2e410b8c8275ee4a8c6c97f6153b1d/javafx-web-20-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.controlsfx/controlsfx/11.1.1/d303c563c23d5176346e8d05932afbec421060ae/controlsfx-11.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.5.32/8befc4a20c17094a148f1409c1bac163bc3ca630/kotlin-stdlib-common-1.5.32.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.9.1/1bf771097bde296c3ab174861954e8aafaaf2e94/junit-jupiter-engine-5.9.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-controls/20/9d8d07b9b3463121fd600861473a8ad2ddf727dc/javafx-controls-20.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.9.1/3145f821b5cd10abcdc5f925baa5fffa6f1b628f/junit-platform-commons-1.9.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/20/57d79e5dbc28f3873f1911bff0f704a77596165f/javafx-graphics-20-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.almasb/fxgl-entity/17.1/d77d51903cb43c35a9d4e499df3ed5e54acafaa1/fxgl-entity-17.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.12.1/aa079f822ddce5548018286d19ccb15c2fc202d7/jackson-annotations-2.12.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.schlegel11/jfxanimation/2.0.0/6130c032f8e5d7ffe34e9d49ea0f56dfd455c8c9/jfxanimation-2.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.dlsc.formsfx/formsfx-core/11.5.0/4e6bc5b8ba4633b1c59d19380623c980eb81e7c2/formsfx-core-11.5.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.almasb/fxgl-io/17.1/b3e7588b07b5f736bf006c797d5792b866afe1a9/fxgl-io-17.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.gluonhq.attach/lifecycle/4.0.13/67db85de9611371b03e3eb3f25454415801a5744/lifecycle-4.0.13.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.jiconfont/jiconfont/1.0.0/e17d93321975b6735ebc283f6832fa0350614d3a/jiconfont-1.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.12.1/8a97e00e429c42f74757b0a8cd1d39dddd41524f/jackson-databind-2.12.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-media/20/474b8a9d1317124b8dcf54307e9e6ff252cb82d6/javafx-media-20-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.10/dd9b193aef96e973d5a11ab13cd17430c2e4306b/gson-2.10.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.swinglabs/swing-worker/1.1/2392206f318ef3af02f8e8a30b2963c253a70390/swing-worker-1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.formdev/flatlaf/3.1.1/6a416d43bbd91fd5632ba6b5d023c49027e92cf5/flatlaf-3.1.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-fxml/20/ffe142ec469d48e31b7076bbf19612494be11d6a/javafx-fxml-20-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.almasb/fxgl-gameplay/17.1/d60da8441f1bd0622f8d6cce64e2cfebcfefb97a/fxgl-gameplay-17.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.12.0/c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e/commons-lang3-3.12.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.kordamp.ikonli/ikonli-core/12.3.1/50c5658c1a5aeeec30320c6be71274d01f5fb869/ikonli-core-12.3.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.jiconfont/jiconfont-swing/1.0.1/14621054d72340b4a664cce4710ba974a3882a19/jiconfont-swing-1.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-base/20/b75c1d2a661fc392bc601fcbb1d1931f8d4c637e/javafx-base-20-win.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.friwi/jogl-all/v2.4.0-rc-20210111/7a4f32ad421930e6f93d7c7eb70a901e7fc1d1ea/jogl-all-v2.4.0-rc-20210111.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.9.1/9274d3757e224bc02eae367bd481062a263c150b/junit-jupiter-5.9.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-graphics/20/7ec67be002e516ab69d1a14f3edbde01fc921664/javafx-graphics-20.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.vincenzopalazzo/material-ui-swing/1.1.2/7ade5ca9d9ebfe6195c06e1a2419391ae59bc7e6/material-ui-swing-1.1.2.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.kordamp.bootstrapfx/bootstrapfx-core/0.4.0/8d019b30266c00770cf29921d1008ad7feed0ed6/bootstrapfx-core-0.4.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.xerial/sqlite-jdbc/3.42.0.0/a4c84376df810062d20c84777b84ec077b5ecdab/sqlite-jdbc-3.42.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.friwi/jcef-api/jcef-87476e9+cef-110.0.25+g75b1c96+chromium-110.0.5481.78/2daaecf95da9e3b52758efeba8810cd58831baf/jcef-api-jcef-87476e9+cef-110.0.25+g75b1c96+chromium-110.0.5481.78.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.gluonhq.attach/util/4.0.13/afd0eab9711a196fdbf639987fd2e5b09cfad237/util-4.0.13.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.9.1/7bb53fbc0173e9f6a9d21d58297af94b1f2f9ce1/junit-jupiter-api-5.9.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.9.1/ffcd1013edaeee112be11fcddeb38882d79238de/junit-jupiter-params-5.9.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

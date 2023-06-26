@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+    id 'org.beryx.jlink' version '2.25.0'
+    id 'java-library'
+}
+
+group = 'org.wikirun'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = '20'
+    modules = ['javafx.controls', 'javafx.fxml', 'javafx.web', 'javafx.media', 'javafx.swing']
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'me.friwi:jcefmaven:110.0.25'
+    implementation('org.controlsfx:controlsfx:11.1.1')
+    implementation('com.dlsc.formsfx:formsfx-core:11.5.0') {
+        exclude(group: 'org.openjfx')
+    }
+    implementation('net.synedra:validatorfx:0.3.1') {
+        exclude(group: 'org.openjfx')
+    }
+    implementation('org.kordamp.ikonli:ikonli-javafx:12.3.1')
+    implementation('org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0')
+    implementation('com.github.almasb:fxgl:17.1') {
+        exclude(group: 'org.openjfx')
+    }
+    implementation('de.schlegel11:jfxanimation:2.0.0')
+    implementation 'io.github.vincenzopalazzo:material-ui-swing:1.1.2'
+    implementation 'com.formdev:flatlaf:3.1.1'
+    implementation 'org.xerial:sqlite-jdbc:3.42.0.0'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-imaging
+    implementation 'org.apache.commons:commons-imaging:1.0-alpha3'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+}
+
+test {
+    useJUnitPlatform()
+}

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="WikiRun:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="158b8764-53e6-41b9-801b-57bbae5d9b83" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="WikiRun" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaFXApplication" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://C:/Program Files/Eclipse Adoptium/jdk-17.0.1.12-hotspot/lib/src.zip!/java.desktop/javax/swing/JPopupMenu.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://C:/Program Files/Eclipse Adoptium/jdk-17.0.1.12-hotspot/lib/src.zip!/java.desktop/javax/swing/JScrollPane.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.vincenzopalazzo/material-ui-swing/1.1.2/d967b935d2326389426b06f658c4f7a99d91bce4/material-ui-swing-1.1.2-sources.jar!/mdlaf/MaterialLookAndFeel.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.vincenzopalazzo/material-ui-swing/1.1.2/d967b935d2326389426b06f658c4f7a99d91bce4/material-ui-swing-1.1.2-sources.jar!/mdlaf/MaterialLookAndFeelInfo.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.vincenzopalazzo/material-ui-swing/1.1.2/d967b935d2326389426b06f658c4f7a99d91bce4/material-ui-swing-1.1.2-sources.jar!/mdlaf/themes/MaterialTheme.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/wikirun/Main.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="2QOXBUazlhoFVSHfGXJpztGp0IS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RESTKit.sync.cert.Ide&quot;: &quot;true&quot;,
+    &quot;RESTKit.sync.env.Ide&quot;: &quot;true&quot;,
+    &quot;RESTKit.sync.requestConfig.Ide&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/dev/WikiRun/src/main/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\dev\WikiRun\src\main\resources" />
+      <recent name="D:\dev\WikiRun" />
+      <recent name="D:\dev\WikiRun\src\main\java\org\logger" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\dev\WikiRun\src\main\resources" />
+      <recent name="D:\dev\WikiRun" />
+      <recent name="D:\dev\WikiRun\src\main\java\org\sql\query" />
+      <recent name="D:\dev\WikiRun\src\main\java\org\sql\attributes\data" />
+      <recent name="D:\dev\WikiRun\src\main\java\org\sql\attributes" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.wikirun" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.SimpleGUI">
+    <configuration name="DBTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.bs.DBTest" />
+      <module name="WikiRun.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.bs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoggerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.logger.LoggerTest" />
+      <module name="WikiRun.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.logger.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SQLTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.sql.SQLTest" />
+      <module name="WikiRun.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.sql.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimpleGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.bs.SimpleGUI" />
+      <module name="WikiRun.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.bs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.wikirun.MainFrame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.wikirun.MainFrame" />
+      <module name="WikiRun.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.wikirun.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SimpleGUI" />
+        <item itemvalue="Application.org.wikirun.MainFrame" />
+        <item itemvalue="Application.SQLTest" />
+        <item itemvalue="Application.LoggerTest" />
+        <item itemvalue="Application.DBTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="158b8764-53e6-41b9-801b-57bbae5d9b83" name="Changes" comment="" />
+      <created>1685225472837</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685225472837</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.awt.IllegalComponentStateException" package="java.awt" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
