@@ -10,12 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="158b8764-53e6-41b9-801b-57bbae5d9b83" name="Changes" comment="Final Push">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bs/Backend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bs/Backend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/bs/SimpleGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bs/SimpleGUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wikis.db" beforeDir="false" afterPath="$PROJECT_DIR$/wikis.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687825878725</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Final Push">
+      <created>1687871351285</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1687871351285</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
