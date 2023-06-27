@@ -1,5 +1,6 @@
 package org.bs;
 
+import javafx.scene.web.WebEngine;
 import org.apache.commons.lang3.time.DurationFormatUtils;
 import org.cef.browser.CefBrowser;
 import org.cef.callback.CefStringVisitor;
@@ -11,7 +12,8 @@ import java.util.Date;
 public class Backend {
     private SimpleGUI gui;
     private DBInteraction dbInt;
-    private CefBrowser browser;
+    private BrowserFX browserFX;
+    //private CefBrowser browser;
     private boolean testMode;
 
     private WatchStop watch;
@@ -21,7 +23,8 @@ public class Backend {
     public Backend(SimpleGUI gui, DBInteraction dbInt, boolean testMode) {
         this.gui = gui;
         this.dbInt = dbInt;
-        this.browser = gui.getBrowser();
+        //this.browser = gui.getBrowser();
+        this.browserFX = gui.getBrowserFX();
         this.testMode = testMode;
     }
 
@@ -49,12 +52,17 @@ public class Backend {
         return currentRun;
     }
 
+    /**
+     * FX
+     * @param run
+     */
     public void startRun(Run run) {
         currentRun = run;
         gui.setCurrentSiteTitle(currentRun.getStart().getName());
         gui.setCurrentRunTitle(currentRun.toString());
+        browserFX.loadURL(currentRun.getStart().getUrl());
         gui.showBrowser();
-        browser.loadURL(currentRun.getStart().getUrl());
+        //browser.loadURL(currentRun.getStart().getUrl());
         System.out.println(currentRun.getStart().getUrl());
         startStopwatch();
     }
@@ -71,29 +79,74 @@ public class Backend {
         gui.showStartScreen();
     }
 
-    public void newSiteLoaded() {
-        if (!browser.getURL().contains("https://de.wikipedia.org/wiki/")) {
-            //if (browser.canGoBack()) browser.goBack();
+    /**
+     * JCEF
+     */
+//    public void newSiteLoaded() {
+//        if (!browser.getURL().contains("https://de.wikipedia.org/wiki/")) {
+//            //if (browser.canGoBack()) browser.goBack();
+//            System.out.println("Nicht gut");
+//        }
+//        else if (currentRun.getGoal().getCode().equals(dbInt.getWikiFromUrl(browser.getURL()).getCode())) {
+//            gui.showEndScreen(currentRun.finishRun(stopStopwatch(), System.currentTimeMillis()));
+//            dbInt.insertRun(currentRun);
+//            gui.addToRunTable(currentRun.forTable());
+//            currentRun = null;
+//
+//        }
+//        else {
+//            gui.setCurrentSiteTitle(getTitleFromSourceCode());
+//            addCurrentWiki();
+//        }
+//    }
+
+    /**
+     * FX
+     * @param url
+     * @param title
+     */
+    public void newSiteLoaded(String url, String title, String oldURL) {
+        if (currentRun == null) return;
+        if (!url.contains("https://de.wikipedia.org/wiki/")) {
+            browserFX.loadURL(oldURL);
             System.out.println("Nicht gut");
         }
-        else if (currentRun.getGoal().getCode().equals(dbInt.getWikiFromUrl(browser.getURL()).getCode())) {
-            gui.showEndScreen(currentRun.finishRun(stopStopwatch(), System.currentTimeMillis()));
-            dbInt.insertRun(currentRun);
+        else if (!dbInt.isInDBUrl(url)) {
+            if (title == null) return;
+            title = title.replace(" – Wikipedia", "");
+            gui.setCurrentSiteTitle(title);
+            addCurrentWiki(url, title);
+        }
+        else if (currentRun.getGoal().getCode().equals(dbInt.getWikiFromUrl(url).getCode())) {
+            currentRun = dbInt.insertRun(currentRun.getStart(), currentRun.getGoal(), stopStopwatch());
+            gui.showEndScreen(currentRun);
             gui.addToRunTable(currentRun.forTable());
             currentRun = null;
 
         }
-        else {
-            gui.setCurrentSiteTitle(getTitleFromSourceCode());
-            addCurrentWiki();
-        }
     }
 
-    public void addCurrentWiki() {
+    /**
+     * JCEF
+     */
+//    public void addCurrentWiki() {
+//        if (testMode) return;
+//        if (browser.getURL().contains("#/media/")) return;
+//        dbInt.insertWiki(getTitleFromSourceCode(), browser.getURL());
+//        System.out.println("Added Wiki:" + getTitleFromSourceCode());
+//    }
+
+    /**
+     * FX
+     * @param url
+     * @param title
+     */
+    public void addCurrentWiki(String url ,String title) {
         if (testMode) return;
-        if (browser.getURL().contains("#/media/")) return;
-        dbInt.insertWiki(getTitleFromSourceCode(), browser.getURL());
-        System.out.println("Added Wiki:" + getTitleFromSourceCode());
+        if (url.contains("#/media/")) return;
+        title = title.replace(" – Wikipedia", "");
+        dbInt.insertWiki(title, url);
+        System.out.println("Added Wiki:" + title);
     }
 
     public Run getRunFromCode(String code) {
@@ -128,34 +181,46 @@ public class Backend {
         return watch.stop();
     }
 
-    private String getTitleFromSourceCode() {
-        final String[] sourceCode = new String[]{""};
-        CefStringVisitor visitor = new CefStringVisitor() {
-            @Override
-            public void visit(String string) {
-                sourceCode[0] = string;
-            }
-        };
-        browser.getSource(visitor);
-        while(sourceCode[0].equals("")) {
-            try {
-                Thread.sleep(10);
-            } catch (Exception e) {
-                System.err.println(e);
-            }
-            //System.out.println(".");
-        }
-        String s = sourceCode[0];
-        s = s.substring(s.indexOf("<title>") + 7, s.indexOf("</title>"));
-        s = s.replace(" – Wikipedia", "");
-        return s;
-    }
+    /**
+     * JCEF
+     * redundant
+     * @return Title
+     */
+//    private String getTitleFromSourceCode() {
+//        final String[] sourceCode = new String[]{""};
+//        CefStringVisitor visitor = new CefStringVisitor() {
+//            @Override
+//            public void visit(String string) {
+//                sourceCode[0] = string;
+//            }
+//        };
+//        browser.getSource(visitor);
+//        while(sourceCode[0].equals("")) {
+//            try {
+//                Thread.sleep(10);
+//            } catch (Exception e) {
+//                System.err.println(e);
+//            }
+//            //System.out.println(".");
+//        }
+//        String s = sourceCode[0];
+//        s = s.substring(s.indexOf("<title>") + 7, s.indexOf("</title>"));
+//        s = s.replace(" – Wikipedia", "");
+//        return s;
+//    }
 
-    public void addBrowser() {
-        this.browser = gui.getBrowser();
-    }
+    /**
+     * Very JCEF
+     */
+//    public void addBrowser() {
+//        this.browser = gui.getBrowser();
+//    }
 
     public Run getCurrentRun() {
         return currentRun;
+    }
+
+    public void setBrowserFX(BrowserFX browserFX) {
+        this.browserFX = browserFX;
     }
 }

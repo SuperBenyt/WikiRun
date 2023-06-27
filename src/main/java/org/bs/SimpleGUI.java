@@ -1,5 +1,9 @@
 package org.bs;
 
+import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.scene.web.WebEngine;
 import me.friwi.jcefmaven.CefInitializationException;
 import me.friwi.jcefmaven.UnsupportedPlatformException;
 import org.cef.CefApp;
@@ -23,8 +27,11 @@ import java.util.ArrayList;
 
 public class SimpleGUI {
 
-    private BrowserFrame browser;
+    //private BrowserFrame browser;
+    private WebEngine engine;
+    private BrowserFX browserFX;
     private Backend backend;
+    private ConsoleInputs console;
 
     private boolean first = true;
 
@@ -197,13 +204,7 @@ public class SimpleGUI {
             @Override
             public void actionPerformed(ActionEvent e) {
                 //changePanel();
-                if (first) {
-                    backend.startFirstRun();
-                    first = false;
-                }
-                else {
-                    backend.createRandomRun();
-                }
+                backend.createRandomRun();
             }
         });
 
@@ -364,26 +365,26 @@ public class SimpleGUI {
 
         //frame.add(endBar, BorderLayout.SOUTH);
 
-        backend = new Backend(this, new DBInteraction("jdbc:sqlite:wikis.db"));
-        try {
-            browser = new BrowserFrame(backend.createRandomRunWoStart().getStart().getUrl(), false, false, args);
-        } catch (UnsupportedPlatformException e) {
-            throw new RuntimeException(e);
-        } catch (CefInitializationException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        //backend = new Backend(this, new DBInteraction("jdbc:sqlite:wikis.db"));
+//        try {
+//            browser = new BrowserFrame(backend.createRandomRunWoStart().getStart().getUrl(), false, false, args);
+//        } catch (UnsupportedPlatformException e) {
+//            throw new RuntimeException(e);
+//        } catch (CefInitializationException e) {
+//            throw new RuntimeException(e);
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
 
-        browser.getClient().addDisplayHandler(new CefDisplayHandlerAdapter() {
-            @Override
-            public void onAddressChange(CefBrowser browser, CefFrame frame, String url) {
-                //backend.newSiteLoaded();
-                System.out.println("Display");
-            }
-        });
+//        browser.getClient().addDisplayHandler(new CefDisplayHandlerAdapter() {
+//            @Override
+//            public void onAddressChange(CefBrowser browser, CefFrame frame, String url) {
+//                //backend.newSiteLoaded();
+//                System.out.println("Display");
+//            }
+//        });
         //browser.getBrowserUI_().setVisible(false);
 
 
@@ -398,6 +399,16 @@ public class SimpleGUI {
         //startScreen.setVisible(false);
         //frame.add(browser.getBrowserUI_(), BorderLayout.CENTER);
 
+        browserFX = new BrowserFX();
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                engine = browserFX.getEngine();
+                initBrowser();
+            }
+        });
+
+
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setTitle("Wikirun");
@@ -406,19 +417,19 @@ public class SimpleGUI {
         frame.setMinimumSize(new Dimension(800, 600));
         frame.setVisible(true);
 
-        frame.addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowClosing(WindowEvent e) {
-                CefApp.getInstance().dispose();
-                frame.dispose();
-                System.out.println("Yeet");
-            }
-        });
+//        frame.addWindowListener(new WindowAdapter() {
+//            @Override
+//            public void windowClosing(WindowEvent e) {
+//                CefApp.getInstance().dispose();
+//                frame.dispose();
+//                System.out.println("Yeet");
+//            }
+//        });
 
 
-        //backend = new Backend(this, new DBInteraction("jdbc:sqlite:wikis.db"), false);
-        backend.addBrowser();
-        new ConsoleInputs(this);
+        backend = new Backend(this, new DBInteraction("jdbc:sqlite:wikis.db"), false);
+        //backend.addBrowser();
+         console = new ConsoleInputs(this);
         //backend.createRandomRun();
         //showStartScreen();
         setRunTable(backend.getAllRunsFormat());
@@ -429,39 +440,88 @@ public class SimpleGUI {
     }
 
 
-    public void changePanel() {
-        if (startScreen.isVisible()) {
-            startScreen.setVisible(false);
-            frame.remove(startScreen);
-            frame.add(browser.getBrowserUI_(), BorderLayout.CENTER);
-            frame.pack();frame.remove(startScreen);
-            frame.remove(browser.getBrowserUI_());
-        }
-        else {
-            startScreen.setVisible(true);
-
-            frame.add(startScreen, BorderLayout.CENTER);
-            frame.pack();
-        }
+    /**
+     * FX
+     */
+    private void initBrowser() {
+        engine.titleProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+                SwingUtilities.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        Platform.runLater(new Runnable() {
+                            @Override
+                            public void run() {
+                                backend.newSiteLoaded(engine.getLocation(), newValue, browserFX.goBack());
+                            }
+                        });
+                    }
+                });
+            }
+        });
+//        engine.locationProperty().addListener(new ChangeListener<String>() {
+//            @Override
+//            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+//                SwingUtilities.invokeLater(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        Platform.runLater(new Runnable() {
+//                            @Override
+//                            public void run() {
+//                                backend.newSiteLoaded(newValue, engine.getTitle(), oldValue);
+//                            }
+//                        });
+//
+//                    }
+//                });
+//            }
+//        });
     }
 
 
+//    public void changePanel() {
+//        if (startScreen.isVisible()) {
+//            startScreen.setVisible(false);
+//            frame.remove(startScreen);
+//            frame.add(browser.getBrowserUI_(), BorderLayout.CENTER);
+//            frame.pack();frame.remove(startScreen);
+//            frame.remove(browser.getBrowserUI_());
+//        }
+//        else {
+//            startScreen.setVisible(true);
+//
+//            frame.add(startScreen, BorderLayout.CENTER);
+//            frame.pack();
+//        }
+//    }
+
+
+    /**
+     * FX
+     */
     public void showBrowser() {
         Dimension temp = frame.getSize();
+        //browserFX.setScene();
         frame.remove(startScreen);
-        frame.remove(browser.getBrowserUI_());
+        //frame.remove(browserFX.getJfxpanel());
         frame.remove(endScreen);
         frame.remove(endBar);
-        frame.add(browser.getBrowserUI_());
+        frame.add(browserFX.getJfxpanel());
+        //browserFX.getJfxpanel().setVisible(true);
         frame.add(menuBar, BorderLayout.NORTH);
         frame.pack();
         frame.setSize(temp);
     }
 
+    /**
+     * FX
+     */
     public void showStartScreen() {
         Dimension temp = frame.getSize();
-        frame.remove(startScreen);
-        frame.remove(browser.getBrowserUI_());
+        //frame.remove(startScreen);
+        //frame.remove(browserFX.getJfxpanel());
+        browserFX.getJfxpanel().setVisible(false);
         frame.remove(endScreen);
         frame.remove(endBar);
         frame.remove(menuBar);
@@ -470,18 +530,27 @@ public class SimpleGUI {
         frame.setSize(temp);
     }
 
+    /**
+     * FX
+     * @param finishedRun
+     */
     public void showEndScreen(Run finishedRun) {
         Dimension temp = frame.getSize();
         frame.remove(startScreen);
-        frame.remove(browser.getBrowserUI_());
-        frame.remove(endScreen);
-        frame.remove(endBar);
+        //frame.remove(browserFX.getJfxpanel());
+        //frame.remove(endScreen);
+        //frame.remove(endBar);
         frame.remove(menuBar);
         runInfo.setText(finishedRun.forDisplay());
         frame.add(endScreen);
         frame.add(endBar, BorderLayout.SOUTH);
         frame.pack();
         frame.setSize(temp);
+    }
+
+    public void setBrowserFX(BrowserFX fx) {
+        backend.setBrowserFX(fx);
+        console.setBrowserFX(fx);
     }
 
     public void setRunTable(ArrayList<ArrayList<String>> data) {
@@ -503,19 +572,26 @@ public class SimpleGUI {
         currentRun.setText(title);
     }
 
-    public void setBrowserVisible() {
-        browser.getBrowserUI_().setVisible(false);
-    }
+    /**
+     * JCEF
+     * obsolete
+     */
+//    public void setBrowserVisible() {
+//        browser.getBrowserUI_().setVisible(false);
+//    }
 
     public void setTimer(String time) {
         timer.setText(time);
     }
 
-    public CefBrowser getBrowser() {
-        return browser.getBrowser();
-    }
+//    public CefBrowser getBrowser() {
+//        return browser.getBrowser();
+//    }
 
     public Backend getBackend() {
         return backend;
+    }
+    public BrowserFX getBrowserFX() {
+        return browserFX;
     }
 }

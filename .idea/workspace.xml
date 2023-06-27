@@ -9,7 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="158b8764-53e6-41b9-801b-57bbae5d9b83" name="Changes" comment="" />
+    <list default="true" id="158b8764-53e6-41b9-801b-57bbae5d9b83" name="Changes" comment="Initial Commit">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/bs/BrowserFX.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/bs/FXTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bs/Backend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bs/Backend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bs/ConsoleInputs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bs/ConsoleInputs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bs/DBInteraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bs/DBInteraction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/bs/SimpleGUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/bs/SimpleGUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wikis.db" beforeDir="false" afterPath="$PROJECT_DIR$/wikis.db" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,6 +58,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="jar://C:/Program Files/Eclipse Adoptium/jdk-17.0.1.12-hotspot/lib/src.zip!/java.desktop/javax/swing/JPopupMenu.java" root0="SKIP_INSPECTION" />
     <setting file="jar://C:/Program Files/Eclipse Adoptium/jdk-17.0.1.12-hotspot/lib/src.zip!/java.desktop/javax/swing/JScrollPane.java" root0="SKIP_INSPECTION" />
@@ -56,27 +74,33 @@
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.vincenzopalazzo/material-ui-swing/1.1.2/d967b935d2326389426b06f658c4f7a99d91bce4/material-ui-swing-1.1.2-sources.jar!/mdlaf/themes/MaterialTheme.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/org/wikirun/Main.java" root0="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2QOXBUazlhoFVSHfGXJpztGp0IS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RESTKit.sync.cert.Ide&quot;: &quot;true&quot;,
-    &quot;RESTKit.sync.env.Ide&quot;: &quot;true&quot;,
-    &quot;RESTKit.sync.requestConfig.Ide&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW&quot;: &quot;true&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/dev/WikiRun/src/main/resources&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RESTKit.sync.cert.Ide": "true",
+    "RESTKit.sync.env.Ide": "true",
+    "RESTKit.sync.requestConfig.Ide": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
+    "git-widget-placeholder": "fx",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/dev/WikiRun",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.build"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\dev\WikiRun\src\main\resources" />
@@ -95,8 +119,8 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.SimpleGUI">
-    <configuration name="DBTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.bs.DBTest" />
+    <configuration name="FXTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.bs.FXTest" />
       <module name="WikiRun.main" />
       <extension name="coverage">
         <pattern>
@@ -163,10 +187,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.SimpleGUI" />
+        <item itemvalue="Application.FXTest" />
         <item itemvalue="Application.org.wikirun.MainFrame" />
         <item itemvalue="Application.SQLTest" />
         <item itemvalue="Application.LoggerTest" />
-        <item itemvalue="Application.DBTest" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +203,29 @@
       <option name="presentableId" value="Default" />
       <updated>1685225472837</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added GitIgnore">
+      <option name="closed" value="true" />
+      <created>1687810632550</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1687810632550</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial Commit">
+      <option name="closed" value="true" />
+      <created>1687810764760</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1687810764760</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added GitIgnore" />
+    <MESSAGE value="Initial Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

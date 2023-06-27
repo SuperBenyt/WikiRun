@@ -43,13 +43,15 @@ public class DBInteraction {
         }));
     }
 
-    public void insertRun(Wiki start, Wiki goal, long time) {
+    public Run insertRun(Wiki start, Wiki goal, long time) {
+        long temp = System.currentTimeMillis();
         access.insert(new SQLInsertion("run", new SQLAttributeBase[]{
                 new SQLStringAttribute(info, start.getCode()),
                 new SQLStringAttribute(info, goal.getCode()),
                 new SQLLongAttribute(time),
-                new SQLLongAttribute(System.currentTimeMillis())
+                new SQLLongAttribute(temp)
         }));
+        return getRun(temp);
     }
 
     public void insertRun(Run run) {
