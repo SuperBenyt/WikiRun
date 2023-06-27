@@ -107,15 +107,16 @@ public class Backend {
      */
     public void newSiteLoaded(String url, String title, String oldURL) {
         if (currentRun == null) return;
-        if (!url.contains("https://de.wikipedia.org/wiki/")) {
-            browserFX.loadURL(oldURL);
-            System.out.println("Nicht gut");
-        }
-        else if (!dbInt.isInDBUrl(url)) {
+
+        if (!dbInt.isInDBUrl(url)) {
             if (title == null) return;
             title = title.replace(" – Wikipedia", "");
             gui.setCurrentSiteTitle(title);
             addCurrentWiki(url, title);
+        }
+        if (!url.contains("https://de.wikipedia.org/wiki/")) {
+            browserFX.loadURL(oldURL);
+            System.out.println("Nicht gut");
         }
         else if (currentRun.getGoal().getCode().equals(dbInt.getWikiFromUrl(url).getCode())) {
             currentRun = dbInt.insertRun(currentRun.getStart(), currentRun.getGoal(), stopStopwatch());

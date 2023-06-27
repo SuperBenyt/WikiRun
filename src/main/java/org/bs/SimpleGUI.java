@@ -537,9 +537,9 @@ public class SimpleGUI {
     public void showEndScreen(Run finishedRun) {
         Dimension temp = frame.getSize();
         frame.remove(startScreen);
-        //frame.remove(browserFX.getJfxpanel());
-        //frame.remove(endScreen);
-        //frame.remove(endBar);
+        frame.remove(browserFX.getJfxpanel());
+        frame.remove(endScreen);
+        frame.remove(endBar);
         frame.remove(menuBar);
         runInfo.setText(finishedRun.forDisplay());
         frame.add(endScreen);

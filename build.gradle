@@ -44,6 +44,12 @@ dependencies {
     implementation 'org.apache.commons:commons-lang3:3.12.0'
 }
 
+jar {
+    manifest {
+        attributes 'SimpleGUI': 'org.bs.SimpleGUI'
+    }
+}
+
 test {
     useJUnitPlatform()
 }
